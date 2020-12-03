@@ -20,7 +20,7 @@ def read_ssn(begin_year,end_year):
     years = range(begin_year,end_year+1)
     
     for y in years:
-        f = '/Users/taylorlast/Documents/GitHub/School/names/yob{}.txt'.format(y)
+        f = '/Users/taylorlast/Documents/GitHub/School/Python/names/yob{}.txt'.format(y)
         df = pd.read_csv(f,names=["names","gender","count"])
         df.insert(0,"year",y)
         all_years = pd.concat([all_years,df],axis=0)
