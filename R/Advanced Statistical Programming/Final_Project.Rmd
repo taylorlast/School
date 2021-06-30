@@ -1,7 +1,7 @@
 ---
-title: "Final_Project"
+title: "Final Project"
 author: "Taylor Last"
-date: "6/30/2021"
+date: "12/7/2020"
 output: html_document
 ---
 
@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r, echo=FALSE, message=FALSE, results='hide'}
+```{r, message=FALSE, warning=FALSE}
 ######################
 # Taylor Last
 # Final Project
@@ -159,7 +159,7 @@ plot_election_results <- function(electoral = F,vote_type = 'total', region = st
 ```
 
 
-```{r, echo=FALSE, message=FALSE, results='hide'}
+```{r,message=FALSE, warning=FALSE}
 #Test cases
 plot_election_results(electoral = T, vote_type = 'total')
 plot_election_results(electoral = T, vote_type = 'total', region = .south_region)
