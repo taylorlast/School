@@ -1,0 +1,302 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Final Project},
+  pdfauthor={Taylor Last},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\title{Final Project}
+\author{Taylor Last}
+\date{12/7/2020}
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{######################}
+\CommentTok{# Taylor Last}
+\CommentTok{# Final Project}
+\CommentTok{######################}
+
+\KeywordTok{library}\NormalTok{(tidyverse)}
+\KeywordTok{library}\NormalTok{(lubridate)}
+\KeywordTok{library}\NormalTok{(usmap)}
+\KeywordTok{library}\NormalTok{(maptools)}
+\KeywordTok{library}\NormalTok{(rgdal)}
+
+\NormalTok{plot_election_results <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(}\DataTypeTok{electoral =}\NormalTok{ F,}\DataTypeTok{vote_type =} \StringTok{'total'}\NormalTok{, }\DataTypeTok{region =}\NormalTok{ statepop}\OperatorTok{$}\NormalTok{abbr)\{}
+  
+  \ControlFlowTok{if}\NormalTok{ (electoral }\OperatorTok{!=}\StringTok{ }\NormalTok{T }\OperatorTok{&&}\StringTok{ }\NormalTok{electoral }\OperatorTok{!=}\NormalTok{F }\OperatorTok{&&}\StringTok{ }\NormalTok{electoral }\OperatorTok{!=}\StringTok{ }\OtherTok{TRUE} \OperatorTok{&&}\StringTok{ }\NormalTok{electoral }\OperatorTok{!=}\StringTok{ }\OtherTok{FALSE}\NormalTok{)\{}
+    \KeywordTok{return}\NormalTok{(}\StringTok{'error: invalid input for electoral'}\NormalTok{)}
+\NormalTok{  \}}
+  
+  \CommentTok{# Read in the file and create inperson column votes}
+\NormalTok{  election_latest <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\StringTok{'/Users/taylorlast/Documents/UGA_FourthYear/STAT_4365/USElection2020-NYT-Results-master/data/latest/presidential.csv'}\NormalTok{, }\DataTypeTok{na =} \KeywordTok{c}\NormalTok{(}\StringTok{''}\NormalTok{,}\StringTok{'NA'}\NormalTok{,}\StringTok{"NULL"}\NormalTok{,}\StringTok{'PrivacySuppressed'}\NormalTok{))}
+\NormalTok{  election_latest =}\StringTok{ }\KeywordTok{mutate}\NormalTok{(election_latest,}\DataTypeTok{results_inperson_trumpd =}\NormalTok{ results_trumpd }\OperatorTok{-}\StringTok{ }\NormalTok{results_absentee_trumpd,}
+                          \DataTypeTok{results_inperson_bidenj =}\NormalTok{ results_bidenj }\OperatorTok{-}\StringTok{ }\NormalTok{results_absentee_bidenj,}
+                          \DataTypeTok{inperson_votes =}\NormalTok{ votes }\OperatorTok{-}\StringTok{ }\NormalTok{absentee_votes)}
+  \ControlFlowTok{if}\NormalTok{(vote_type }\OperatorTok{==}\StringTok{ 'total'}\NormalTok{)\{}
+\NormalTok{    election=}\KeywordTok{select}\NormalTok{(election_latest,state,votes,results_trumpd,results_bidenj)}
+    
+\NormalTok{    election_states=}\KeywordTok{group_by}\NormalTok{(election,state)}
+\NormalTok{    election_states}
+    
+    \CommentTok{#Total votes by state}
+\NormalTok{    total_votes=}\KeywordTok{summarise}\NormalTok{(election_states,}\KeywordTok{sum}\NormalTok{(votes))}
+\NormalTok{    total_votes}
+    
+    \CommentTok{#Trump votes}
+\NormalTok{    trump_votes=}\KeywordTok{summarise}\NormalTok{(election_states,}\KeywordTok{sum}\NormalTok{(results_trumpd))}
+\NormalTok{    trump_votes}
+    
+    \CommentTok{#Biden votes}
+\NormalTok{    biden_votes=}\KeywordTok{summarise}\NormalTok{(election_states,}\KeywordTok{sum}\NormalTok{(results_bidenj))}
+\NormalTok{    biden_votes}
+    
+    \CommentTok{#Mutate the data frame}
+\NormalTok{    voting_data=}\KeywordTok{mutate}\NormalTok{(total_votes,}
+                       \DataTypeTok{trump =}\NormalTok{ trump_votes}\OperatorTok{$}\StringTok{`}\DataTypeTok{sum(results_trumpd)}\StringTok{`}\OperatorTok{/}\NormalTok{total_votes}\OperatorTok{$}\StringTok{`}\DataTypeTok{sum(votes)}\StringTok{`}\NormalTok{,}
+                       \DataTypeTok{biden =}\NormalTok{ biden_votes}\OperatorTok{$}\StringTok{`}\DataTypeTok{sum(results_bidenj)}\StringTok{`}\OperatorTok{/}\NormalTok{total_votes}\OperatorTok{$}\StringTok{`}\DataTypeTok{sum(votes)}\StringTok{`}\NormalTok{,}
+                       \DataTypeTok{total =} \StringTok{`}\DataTypeTok{sum(votes)}\StringTok{`}\NormalTok{)}
+\NormalTok{  \}}\ControlFlowTok{else} \ControlFlowTok{if}\NormalTok{ (vote_type }\OperatorTok{==}\StringTok{ 'absentee'}\NormalTok{)\{}
+\NormalTok{    election=}\KeywordTok{select}\NormalTok{(election_latest,state,absentee_votes,results_absentee_trumpd,results_absentee_bidenj)}
+    
+\NormalTok{    election_states=}\KeywordTok{group_by}\NormalTok{(election,state)}
+\NormalTok{    election_states}
+    
+    \CommentTok{#Total votes by state}
+\NormalTok{    total_votes=}\KeywordTok{summarise}\NormalTok{(election_states,}\KeywordTok{sum}\NormalTok{(absentee_votes))}
+\NormalTok{    total_votes}
+    
+    \CommentTok{#Trump votes}
+\NormalTok{    trump_votes=}\KeywordTok{summarise}\NormalTok{(election_states,}\KeywordTok{sum}\NormalTok{(results_absentee_trumpd))}
+\NormalTok{    trump_votes}
+    
+    \CommentTok{#Biden votes}
+\NormalTok{    biden_votes=}\KeywordTok{summarise}\NormalTok{(election_states,}\KeywordTok{sum}\NormalTok{(results_absentee_bidenj))}
+\NormalTok{    biden_votes}
+    
+    \CommentTok{#Mutate the data frame}
+\NormalTok{    voting_data=}\KeywordTok{mutate}\NormalTok{(total_votes,}
+                       \DataTypeTok{trump =}\NormalTok{ trump_votes}\OperatorTok{$}\StringTok{`}\DataTypeTok{sum(results_absentee_trumpd)}\StringTok{`}\OperatorTok{/}\NormalTok{total_votes}\OperatorTok{$}\StringTok{`}\DataTypeTok{sum(absentee_votes)}\StringTok{`}\NormalTok{,}
+                       \DataTypeTok{biden =}\NormalTok{ biden_votes}\OperatorTok{$}\StringTok{`}\DataTypeTok{sum(results_absentee_bidenj)}\StringTok{`}\OperatorTok{/}\NormalTok{total_votes}\OperatorTok{$}\StringTok{`}\DataTypeTok{sum(absentee_votes)}\StringTok{`}\NormalTok{,}
+                       \DataTypeTok{total =} \StringTok{`}\DataTypeTok{sum(absentee_votes)}\StringTok{`}\NormalTok{)}
+\NormalTok{  \}}\ControlFlowTok{else} \ControlFlowTok{if}\NormalTok{ (vote_type }\OperatorTok{==}\StringTok{ 'in-person'}\NormalTok{)\{}
+\NormalTok{    election=}\KeywordTok{select}\NormalTok{(election_latest,state,inperson_votes,results_inperson_trumpd,results_inperson_bidenj)}
+    
+\NormalTok{    election_states=}\KeywordTok{group_by}\NormalTok{(election,state)}
+\NormalTok{    election_states}
+    
+    \CommentTok{#Total votes by state}
+\NormalTok{    total_votes=}\KeywordTok{summarise}\NormalTok{(election_states,}\KeywordTok{sum}\NormalTok{(inperson_votes))}
+\NormalTok{    total_votes}
+    
+    \CommentTok{#Trump votes}
+\NormalTok{    trump_votes=}\KeywordTok{summarise}\NormalTok{(election_states,}\KeywordTok{sum}\NormalTok{(results_inperson_trumpd))}
+\NormalTok{    trump_votes}
+    
+    \CommentTok{#Biden votes}
+\NormalTok{    biden_votes=}\KeywordTok{summarise}\NormalTok{(election_states,}\KeywordTok{sum}\NormalTok{(results_inperson_bidenj))}
+\NormalTok{    biden_votes}
+    
+    \CommentTok{#Mutate the data frame}
+\NormalTok{    voting_data=}\KeywordTok{mutate}\NormalTok{(total_votes,}
+                       \DataTypeTok{trump =}\NormalTok{ trump_votes}\OperatorTok{$}\StringTok{`}\DataTypeTok{sum(results_inperson_trumpd)}\StringTok{`}\OperatorTok{/}\NormalTok{total_votes}\OperatorTok{$}\StringTok{`}\DataTypeTok{sum(inperson_votes)}\StringTok{`}\NormalTok{,}
+                       \DataTypeTok{biden =}\NormalTok{ biden_votes}\OperatorTok{$}\StringTok{`}\DataTypeTok{sum(results_inperson_bidenj)}\StringTok{`}\OperatorTok{/}\NormalTok{total_votes}\OperatorTok{$}\StringTok{`}\DataTypeTok{sum(inperson_votes)}\StringTok{`}\NormalTok{,}
+                       \DataTypeTok{total =} \StringTok{`}\DataTypeTok{sum(inperson_votes)}\StringTok{`}\NormalTok{)}
+\NormalTok{  \}}\ControlFlowTok{else}\NormalTok{\{}
+    \KeywordTok{return}\NormalTok{(}\StringTok{'error: invalid vote type'}\NormalTok{)}
+\NormalTok{  \}}
+
+\NormalTok{  voting_data =}\StringTok{ }\NormalTok{voting_data[}\KeywordTok{c}\NormalTok{(}\StringTok{'state'}\NormalTok{,}\StringTok{'trump'}\NormalTok{,}\StringTok{'biden'}\NormalTok{,}\StringTok{'total'}\NormalTok{)]}
+  
+\NormalTok{  voting_data =}\StringTok{ }\KeywordTok{mutate}\NormalTok{(voting_data, }\DataTypeTok{trump_win =} \KeywordTok{ifelse}\NormalTok{(voting_data}\OperatorTok{$}\NormalTok{trump }\OperatorTok{>}\StringTok{ }\NormalTok{voting_data}\OperatorTok{$}\NormalTok{biden,}\DecValTok{1}\NormalTok{,}\DecValTok{0}\NormalTok{))}
+  
+  \CommentTok{# Get the centers for each state}
+\NormalTok{  state_centers =}\StringTok{ }\KeywordTok{usmap_transform}\NormalTok{(}\KeywordTok{tibble}\NormalTok{(state.center}\OperatorTok{$}\NormalTok{x, state.center}\OperatorTok{$}\NormalTok{y,state.name))}
+  
+  \CommentTok{# Read in our electoral dataframe}
+\NormalTok{  electoral_votes <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\StringTok{'/Users/taylorlast/Documents/UGA_FourthYear/STAT_4365/electoralvotes.csv'}\NormalTok{)}
+  
+  \CommentTok{# Data Frame allows us to calculate electoral votes with DC}
+\NormalTok{  electoral_college =}\StringTok{ }\KeywordTok{merge}\NormalTok{(voting_data,electoral_votes, }\DataTypeTok{by =}\StringTok{'state'}\NormalTok{)}
+\NormalTok{  electoral_college =}\StringTok{ }\KeywordTok{mutate}\NormalTok{(electoral_college,}\DataTypeTok{abbr =}\NormalTok{ statepop}\OperatorTok{$}\NormalTok{abbr)}
+\NormalTok{  electoral_college =}\StringTok{ }\KeywordTok{filter}\NormalTok{(electoral_college, abbr }\OperatorTok{%in%}\StringTok{ }\NormalTok{region)}
+\NormalTok{  electoral_biden =}\StringTok{ }\KeywordTok{sum}\NormalTok{(electoral_college}\OperatorTok{$}\StringTok{`}\DataTypeTok{number of votes}\StringTok{`}\NormalTok{) }\OperatorTok{-}\StringTok{ }\KeywordTok{sum}\NormalTok{((electoral_college}\OperatorTok{$}\StringTok{`}\DataTypeTok{number of votes}\StringTok{`}\NormalTok{)}\OperatorTok{*}\NormalTok{(electoral_college}\OperatorTok{$}\NormalTok{trump_win))}
+\NormalTok{  electoral_trump =}\StringTok{ }\KeywordTok{sum}\NormalTok{((electoral_college}\OperatorTok{$}\StringTok{`}\DataTypeTok{number of votes}\StringTok{`}\NormalTok{)}\OperatorTok{*}\NormalTok{(electoral_college}\OperatorTok{$}\NormalTok{trump_win))}
+  
+  \CommentTok{# Remove DC because it doesn't have values for center}
+\NormalTok{  electoral_votes =}\StringTok{ }\NormalTok{electoral_votes[}\OperatorTok{-}\DecValTok{9}\NormalTok{,]}
+\NormalTok{  electoral_votes =}\StringTok{ }\KeywordTok{mutate}\NormalTok{(electoral_votes,}\DataTypeTok{center_long =}\NormalTok{ state_centers}\OperatorTok{$}\NormalTok{state.center.x}\FloatTok{.1}\NormalTok{, }\DataTypeTok{center_lat =}\NormalTok{ state_centers}\OperatorTok{$}\NormalTok{state.center.y}\FloatTok{.1}\NormalTok{)}
+  
+  \CommentTok{# Change the center for Alaska and Hawaii}
+\NormalTok{  electoral_votes[}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{]=}\OperatorTok{-}\DecValTok{1203560}
+\NormalTok{  electoral_votes[}\DecValTok{2}\NormalTok{,}\DecValTok{4}\NormalTok{]=}\OperatorTok{-}\DecValTok{1837070}
+\NormalTok{  electoral_votes[}\DecValTok{11}\NormalTok{,}\DecValTok{3}\NormalTok{]=}\OperatorTok{-}\DecValTok{450000}
+\NormalTok{  electoral_votes[}\DecValTok{11}\NormalTok{,}\DecValTok{4}\NormalTok{]=}\OperatorTok{-}\DecValTok{2130070}
+  
+\NormalTok{  voting_data =}\StringTok{ }\KeywordTok{mutate}\NormalTok{(voting_data, }\DataTypeTok{state =}\NormalTok{ statepop}\OperatorTok{$}\NormalTok{full, }\DataTypeTok{abbr =}\NormalTok{ statepop}\OperatorTok{$}\NormalTok{abbr)}
+\NormalTok{  electoral_votes =}\StringTok{ }\KeywordTok{mutate}\NormalTok{(electoral_votes,}\DataTypeTok{state =}\NormalTok{ state.name)}
+\NormalTok{  election_results =}\StringTok{ }\KeywordTok{merge}\NormalTok{(voting_data,electoral_votes, }\DataTypeTok{by =} \StringTok{'state'}\NormalTok{)}
+  
+  \CommentTok{#Filter by region - will make sure electoral votes don't show for out of region}
+\NormalTok{  election_results =}\StringTok{ }\KeywordTok{filter}\NormalTok{(election_results,abbr }\OperatorTok{%in%}\StringTok{ }\NormalTok{region)}
+  
+  \ControlFlowTok{if}\NormalTok{ (electoral }\OperatorTok{==}\StringTok{ }\NormalTok{F)\{}
+  \KeywordTok{plot_usmap}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ election_results, }\DataTypeTok{regions =} \StringTok{'states'}\NormalTok{,}\DataTypeTok{values =} \StringTok{'trump'}\NormalTok{,}\DataTypeTok{include =}\NormalTok{ region) }\OperatorTok{+}
+\StringTok{    }\KeywordTok{scale_fill_continuous}\NormalTok{(}\DataTypeTok{low =} \StringTok{'white'}\NormalTok{, }\DataTypeTok{high =} \StringTok{'red'}\NormalTok{, }\DataTypeTok{name =} \StringTok{'Vote Percentage for Trump'}\NormalTok{)}\OperatorTok{+}
+\StringTok{    }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{legend.position =} \StringTok{"right"}\NormalTok{) }\OperatorTok{+}
+\StringTok{    }\KeywordTok{ggtitle}\NormalTok{(}\KeywordTok{paste}\NormalTok{(vote_type, }\StringTok{'popular vote based on the latest update since the election'}\NormalTok{))}\OperatorTok{+}
+\StringTok{    }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{))}
+\NormalTok{  \}}\ControlFlowTok{else}\NormalTok{ \{}
+  \KeywordTok{plot_usmap}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ election_results,}\DataTypeTok{regions =} \StringTok{'states'}\NormalTok{, }\DataTypeTok{values =} \StringTok{'trump_win'}\NormalTok{, }\DataTypeTok{include =}\NormalTok{ region) }\OperatorTok{+}
+\StringTok{    }\KeywordTok{scale_fill_continuous}\NormalTok{(}\DataTypeTok{low=} \StringTok{'blue'}\NormalTok{,}\DataTypeTok{high =} \StringTok{'red'}\NormalTok{, }\DataTypeTok{labels =} \KeywordTok{c}\NormalTok{(}\StringTok{'Biden'}\NormalTok{,}\StringTok{'Trump'}\NormalTok{), }\DataTypeTok{breaks =} \KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{), }\DataTypeTok{name =} \StringTok{'Candidate'}\NormalTok{,}\DataTypeTok{guide =} \StringTok{'legend'}\NormalTok{) }\OperatorTok{+}
+\StringTok{    }\KeywordTok{geom_text}\NormalTok{(}\DataTypeTok{data=}\NormalTok{election_results,}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{center_long,}\DataTypeTok{y=}\NormalTok{center_lat,}\DataTypeTok{label =} \StringTok{`}\DataTypeTok{number of votes}\StringTok{`}\NormalTok{)) }\OperatorTok{+}
+\StringTok{    }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{legend.position =} \StringTok{'right'}\NormalTok{) }\OperatorTok{+}
+\StringTok{    }\KeywordTok{ggtitle}\NormalTok{(}\KeywordTok{paste}\NormalTok{(}\StringTok{'Biden:'}\NormalTok{, electoral_biden,}
+                  \StringTok{'Electoral Votes}\CharTok{\textbackslash{}n}\StringTok{Trump:'}\NormalTok{, electoral_trump,}
+                  \StringTok{'Electoral Votes}\CharTok{\textbackslash{}n}\StringTok{Based on the latest update since the election'}\NormalTok{))}\OperatorTok{+}
+\StringTok{    }\KeywordTok{theme}\NormalTok{(}\DataTypeTok{plot.title =} \KeywordTok{element_text}\NormalTok{(}\DataTypeTok{size =} \DecValTok{12}\NormalTok{, }\DataTypeTok{face =} \StringTok{"bold"}\NormalTok{))}
+\NormalTok{  \}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#Test cases}
+\KeywordTok{plot_election_results}\NormalTok{(}\DataTypeTok{electoral =}\NormalTok{ T, }\DataTypeTok{vote_type =} \StringTok{'total'}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Final_Project_files/figure-latex/unnamed-chunk-2-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot_election_results}\NormalTok{(}\DataTypeTok{electoral =}\NormalTok{ T, }\DataTypeTok{vote_type =} \StringTok{'total'}\NormalTok{, }\DataTypeTok{region =}\NormalTok{ .south_region)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Final_Project_files/figure-latex/unnamed-chunk-2-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot_election_results}\NormalTok{(}\DataTypeTok{electoral =}\NormalTok{ F, }\DataTypeTok{vote_type =} \StringTok{'total'}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Final_Project_files/figure-latex/unnamed-chunk-2-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot_election_results}\NormalTok{(}\DataTypeTok{electoral =}\NormalTok{ F, }\DataTypeTok{vote_type =} \StringTok{'absentee'}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Final_Project_files/figure-latex/unnamed-chunk-2-4.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot_election_results}\NormalTok{(}\DataTypeTok{electoral =}\NormalTok{ F, }\DataTypeTok{vote_type =} \StringTok{'in-person'}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Final_Project_files/figure-latex/unnamed-chunk-2-5.pdf}
+
+\end{document}
