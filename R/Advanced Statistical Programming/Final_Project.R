@@ -16,7 +16,7 @@ plot_election_results <- function(electoral = F,vote_type = 'total', region = st
   }
   
   # Read in the file and create inperson column votes
-  election_latest <- read_csv('/Users/taylorlast/Documents/UGA_FourthYear/STAT_4365/USElection2020-NYT-Results-master/data/latest/presidential.csv', na = c('','NA',"NULL",'PrivacySuppressed'))
+  election_latest <- read_csv('', na = c('','NA',"NULL",'PrivacySuppressed'))
   election_latest = mutate(election_latest,results_inperson_trumpd = results_trumpd - results_absentee_trumpd,
                           results_inperson_bidenj = results_bidenj - results_absentee_bidenj,
                           inperson_votes = votes - absentee_votes)
